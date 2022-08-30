@@ -1,6 +1,6 @@
 {
-  "name": "@JoeMessi/theme-testing-v4",
-  "version": "0.0.75",
+  "name": "@joemessi/theme-testing-v4",
+  "version": "0.0.1",
   "description": "A Recite Me custom react component library.",
   "author": "Recite Me",
   "license": "ISC",
@@ -50,8 +50,8 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/icons-material": "^5.8.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "storybook": "^6.5.9"
   },
   "files": [
