@@ -1,0 +1,130 @@
+{
+    "extends": [
+      "airbnb-typescript",
+      "airbnb/hooks",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+      //  "plugin:prettier/recommended"
+    ],
+    "plugins": ["react", "@typescript-eslint"],
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+  
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "project": "./tsconfig.json"
+    },
+    "ignorePatterns": ["*.config.js"],
+    "rules": {
+      //Only allow ++ for loops: https://eslint.org/docs/rules/no-plusplus
+      "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+  
+      "react/no-unused-prop-types": 1,
+      
+      //Enforce double quotes and allow backticks for literals: https://eslint.org/docs/rules/quotes
+      "@typescript-eslint/quotes": [
+        "error",
+        "double",
+        { "allowTemplateLiterals": true }
+      ],
+  
+      "@typescript-eslint/ban-types": 0,
+  
+      //https://github.com/typescript-eslint/typescript-eslint/blob/v4.33.0/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md
+      "@typescript-eslint/explicit-module-boundary-types": 0,
+  
+      //https://github.com/typescript-eslint/typescript-eslint/blob/v4.33.0/packages/eslint-plugin/docs/rules/no-shadow.md
+      "@typescript-eslint/no-shadow": 0,
+  
+      "arrow-body-style": 1,
+  
+      //https://github.com/facebook/react/issues/14920
+      "react-hooks/exhaustive-deps": "warn",
+  
+      //https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
+      "react/jsx-key": [1, { "checkFragmentShorthand": true }],
+  
+      //https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
+      "react/jsx-props-no-spreading": 0,
+  
+      //https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
+      "react/require-default-props": 0,
+  
+      //https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
+      "react/no-array-index-key": 1,
+  
+      "react/jsx-filename-extension": [
+        2,
+        { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+      ],
+      "react/react-in-jsx-scope": "off",
+      "radix": 0,
+      "linebreak-style": "off",
+      "no-param-reassign": [2, { "props": false }]
+      // "prettier/prettier": [
+      //   "error",
+      //   {
+      //     "endOfLine": "auto"
+      //   }
+      // ]
+    }
+  }
+  
+  // {
+  //   "extends": [
+  //     "react-app",
+  //     "airbnb",
+  //     "plugin:jsx-a11y/recommended",
+  //     "plugin:import/typescript",
+  //     "prettier"
+  //     //"prettier/react"
+  //   ],
+  //   "plugins": ["jsx-a11y", "prettier"],
+  //   "settings": {
+  //     "import/resolver": {
+  //       "typescript": {},
+  //       "node": {
+  //         "extensions": [".js", ".jsx", ".d.ts", ".ts", ".tsx"],
+  //         "moduleDirectory": ["node_modules", "src/"]
+  //       }
+  //     }
+  //   },
+  //   "rules": {
+  //     "react/jsx-filename-extension": [
+  //       2,
+  //       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+  //     ],
+  //     "react/react-in-jsx-scope": "off",
+  //     "import/extensions": [
+  //       "error",
+  //       "ignorePackages",
+  //       {
+  //         "js": "never",
+  //         "jsx": "never",
+  //         "ts": "never",
+  //         "tsx": "never"
+  //       }
+  //     ]
+  //   }
+  //   // "rules": {
+  //   //   "semi": 0,
+  //   //   "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+  //   //   "prettier/prettier": [
+  //   //     "error",
+  //   //     {
+  //   //       "semi": false
+  //   //     }
+  //   //   ]
+  //   // }
+  // }
