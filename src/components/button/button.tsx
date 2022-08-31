@@ -12,6 +12,7 @@ export interface BtnProps extends ButtonProps {
 
 export const Button = ({
   label,
+  type,
   color = "primary",
   variant = "contained",
   size = "medium",
@@ -24,6 +25,7 @@ export const Button = ({
     <S.Btn
       color={color}
       variant={variant}
+      type={type}
       size={size}
       href={href}
       disabled={disabled}
