@@ -22,20 +22,20 @@ export const Button = ({
   disabled,
   onClick,
 }: BtnProps) => (
-  <ThemeProvider theme={defaultTheme}>
-    <S.Btn
-      color={color}
-      variant={variant}
-      type={type}
-      size={size}
-      href={href}
-      fullWidth={fullWidth}
-      disabled={disabled}
-      startIcon={leftIcon && <Icon iconName={leftIcon} />}
-      onClick={onClick}
-      data-testid="btn"
-    >
-      {label}
-    </S.Btn>
-  </ThemeProvider>
+  // <ThemeProvider theme={defaultTheme}>
+  <S.Btn
+    color={color}
+    variant={variant}
+    type={type}
+    size={size}
+    href={href}
+    fullWidth={fullWidth}
+    disabled={disabled}
+    startIcon={leftIcon && <Icon iconName={leftIcon} />}
+    onClick={onClick}
+    data-testid="btn"
+  >
+    {label}
+  </S.Btn>
+  // </ThemeProvider>
 );
