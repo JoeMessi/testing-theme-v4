@@ -16,6 +16,7 @@ export const Button = ({
   color = "primary",
   variant = "contained",
   size = "medium",
+  fullWidth = false,
   href,
   leftIcon,
   disabled,
@@ -28,6 +29,7 @@ export const Button = ({
       type={type}
       size={size}
       href={href}
+      fullWidth={fullWidth}
       disabled={disabled}
       startIcon={leftIcon && <Icon iconName={leftIcon} />}
       onClick={onClick}

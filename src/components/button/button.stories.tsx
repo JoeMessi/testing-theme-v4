@@ -9,7 +9,6 @@ const disabledControls = [
   "classes",
   "disableElevation",
   "disableFocusRipple",
-  "fullWidth",
   "endIcon",
   "sx",
   "tabIndex",
@@ -47,6 +46,9 @@ export default {
     leftIcon: {
       options: [...Object.keys(SvgIconsMap), undefined],
       control: { type: "select" },
+    },
+    fullWidth: {
+      control: { type: "boolean" },
     },
     onClick: {
       action: "clicked",
