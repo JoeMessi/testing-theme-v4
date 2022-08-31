@@ -1,30 +1,30 @@
-import React from 'react';
-import { Meta, Story } from '@storybook/react';
-import { BtnProps, Button } from './button';
-import { SvgIconsMap } from '../../iconography/icons';
+import React from "react";
+import { Meta, Story } from "@storybook/react";
+import { BtnProps, Button } from "./button";
+import { SvgIconsMap } from "../../iconography/icons";
 
 const disabledControls = [
-  'startIcon',
-  'children',
-  'classes',
-  'disableElevation',
-  'disableFocusRipple',
-  'fullWidth',
-  'endIcon',
-  'sx',
-  'tabIndex',
-  'action',
-  'centerRipple',
-  'disableRipple',
-  'disableTouchRipple',
-
-  'focusRipple',
-  'focusVisibleClassName',
-  'LinkComponent',
-  'onFocusVisible',
-  'TouchRippleProps',
-  'touchRippleRef',
-  'ref',
+  "startIcon",
+  "children",
+  "classes",
+  "disableElevation",
+  "disableFocusRipple",
+  "fullWidth",
+  "endIcon",
+  "sx",
+  "tabIndex",
+  "action",
+  "centerRipple",
+  "disableRipple",
+  "disableTouchRipple",
+  "onClick",
+  "focusRipple",
+  "focusVisibleClassName",
+  "LinkComponent",
+  "onFocusVisible",
+  "TouchRippleProps",
+  "touchRippleRef",
+  "ref",
 ].reduce(
   (obj, i) => ({
     ...obj,
@@ -34,22 +34,22 @@ const disabledControls = [
       },
     },
   }),
-  {}
+  {},
 );
 
 export default {
-  title: 'Button',
+  title: "Button",
   component: Button,
   argTypes: {
     label: {
-      control: { type: 'text' },
+      control: { type: "text" },
     },
     leftIcon: {
       options: [...Object.keys(SvgIconsMap), undefined],
-      control: { type: 'select' },
+      control: { type: "select" },
     },
     onClick: {
-      action: 'clicked',
+      action: "clicked",
     },
     ...disabledControls,
   },
@@ -59,16 +59,16 @@ const Template: Story<BtnProps> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  label: 'Click',
-  color: 'primary',
-  variant: 'contained',
-  leftIcon: 'Add',
+  label: "Click",
+  color: "primary",
+  variant: "contained",
+  leftIcon: "Add",
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Click',
-  color: 'secondary',
-  variant: 'contained',
-  leftIcon: 'Alarm',
+  label: "Click",
+  color: "secondary",
+  variant: "contained",
+  leftIcon: "Alarm",
 };
