@@ -1,8 +1,9 @@
-import { ButtonProps } from '@mui/material';
-import React from 'react';
-import * as S from './button.styles';
-import { SvgIconNames } from '../../iconography/icons';
-import { Icon } from '../icon/icon';
+import { ButtonProps, ThemeProvider } from "@mui/material";
+import React from "react";
+import * as S from "./button.styles";
+import { SvgIconNames } from "../../iconography/icons";
+import { Icon } from "../icon/icon";
+import { defaultTheme } from "../../theme/theme";
 
 export interface BtnProps extends ButtonProps {
   label?: string;
@@ -11,24 +12,26 @@ export interface BtnProps extends ButtonProps {
 
 export const Button = ({
   label,
-  color = 'primary',
-  variant = 'contained',
-  size = 'medium',
+  color = "primary",
+  variant = "contained",
+  size = "medium",
   href,
   leftIcon,
   disabled,
   onClick,
 }: BtnProps) => (
-  <S.Btn
-    color={color}
-    variant={variant}
-    size={size}
-    href={href}
-    disabled={disabled}
-    startIcon={leftIcon && <Icon iconName={leftIcon} />}
-    onClick={onClick}
-    data-testid="btn"
-  >
-    {label}
-  </S.Btn>
+  <ThemeProvider theme={defaultTheme}>
+    <S.Btn
+      color={color}
+      variant={variant}
+      size={size}
+      href={href}
+      disabled={disabled}
+      startIcon={leftIcon && <Icon iconName={leftIcon} />}
+      onClick={onClick}
+      data-testid="btn"
+    >
+      {label}
+    </S.Btn>
+  </ThemeProvider>
 );
